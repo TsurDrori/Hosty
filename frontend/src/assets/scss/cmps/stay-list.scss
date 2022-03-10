@@ -1,0 +1,13 @@
+.stay-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding-top: 80px;
+  justify-items: stretch;
+}
+
+.active-stay{
+  border-bottom: rgb(34, 34, 34)  solid 1px;
+}
+
+

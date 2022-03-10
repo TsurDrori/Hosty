@@ -1,0 +1,262 @@
+.stay-details-container {
+  margin-top: 50px;
+  display: grid;
+  justify-items: center;
+  font-size: 1rem;
+  font-family: circular-light;
+
+  .map {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    .map-title {
+      margin-bottom: 40px;
+      font-size: 1.375rem;
+      font-weight: 600;
+    }
+    .map-location {
+      margin-bottom: 40px;
+      font-size: rem(16px);
+      font-weight: 400;
+    }
+  }
+}
+
+.center-layout {
+  grid-column: 2;
+}
+
+.stay-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 45px;
+}
+
+.stay-name {
+  font-size: 26px;
+  line-height: 20px;
+  color: $dark-gray;
+  @media (max-width: 740px){
+    padding-top: 60px;
+  }
+}
+
+.stay-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+
+  .reviews {
+    text-decoration: underline;
+    color: $dark-gray;
+    font-weight: 400;
+  }
+
+  .stay-address {
+    color: $light-gray;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: $dark-gray;
+
+  .text {
+    text-decoration: underline;
+  }
+}
+
+.stay-details-images {
+  @media (min-width: 850px) {
+    display: grid;
+    padding-top: 18px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-rows: 26vh 26vh;
+    grid-gap: 8px;
+    :not(:first-child){
+      display: grid;
+    }
+    :first-child {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+    }
+    :nth-child(3) img {
+      border-top-right-radius: 15px;
+    }
+    :nth-child(5) img {
+      border-bottom-right-radius: 15px;
+    }
+  }
+  @media (max-width: 850px){
+    :not(:first-child){
+      display: none;
+    }
+
+  }
+
+  .image-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+
+  .left-side {
+    @media (min-width: 850px){
+
+      justify-items: flex-end;
+  
+      width: 57%;
+    }
+  }
+  .right-side {
+    width: 33%;
+    padding-bottom: 30px;
+  }
+}
+
+.stay-detail-host-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .stay-details-hosted {
+    padding-bottom: 24px;
+    padding-top: 48px;
+
+    .hosted-by {
+      font-size: 22px;
+      display: flex;
+      font-weight: 600;
+      justify-content: space-between;
+    }
+    .beds {
+      color: $gray;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .host-img {
+    margin-top: 26px;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.stay-details-description {
+  padding: 50px 0;
+  color: $gray;
+  font-size: 17px;
+  border-top: 1px solid rgb(190, 190, 190);
+  text-align: justify;
+
+  
+  font-family: circular-light;
+  line-height: 24px;
+  line-height: 1.5rem;
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 5px;
+    }
+  }
+}
+
+.ameneties {
+  padding: 50px 0;
+
+  .stay-details-ameneties {
+    --n: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(200px, 100% / var(--n)), 1fr));
+    grid-gap: 20px;
+
+    .amenity {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+  }
+  .title {
+    color: $dark-gray;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+}
+
+.reviews-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  padding: 50px 0;
+  grid-gap: 50px;
+  text-align: justify;
+  border-bottom: lightgrey solid 1px;
+
+  .txt {
+    font-weight: 400;
+    .txt {
+      color: rgb(34, 34, 34);
+    }
+  }
+
+  .host-img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .review-preview-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+
+    .fullname {
+      font-family: circular-bold;
+      font-size: 16px;
+    }
+    .date {
+      font-size: 14px;
+      color: $light-gray;
+    }
+  }
+  .review-preview-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  p {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

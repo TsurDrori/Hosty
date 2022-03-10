@@ -1,0 +1,132 @@
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  align-items: center;
+}
+
+.round-button button {
+  background-color: white;
+  border-radius: 50px;
+  margin: 4px;
+  padding: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-width: 0.1px;
+  border-color: rgba(0, 0, 0, 0.123);
+}
+
+.cal-modal {
+  height: 400px;
+  width: 35rem;
+  display: none;
+  // visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  border-radius: 10%;
+  left: 50rem;
+  bottom: 20rem;
+  // float: right;
+}
+
+.guests-modal {
+  height: 21rem;
+  width: 23rem;
+  display: none;
+  // visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  background-color: whitesmoke;
+  border-color: rgb(182, 177, 177);
+  border-radius: 5%;
+  left: 75rem;
+  bottom: 22rem;
+}
+
+.filters-modal {
+  height: 70%;
+  width: 40%;
+  display: none;
+  // visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  background-color: whitesmoke;
+  border-color: rgb(182, 177, 177);
+  border-radius: 5%;
+  // left: 62rem;
+  // bottom: 25rem;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+.screen {
+  position: fixed;
+  opacity: 0.5;
+  background-color: gray;
+  inset: 0;
+}
+
+.shown {
+  display: block;
+}
+
+.date-range {
+  width: fit-content;
+  border-radius: 10%;
+
+  .css-s8aszu {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.38);
+  }
+}
+
+.header__bar {
+  visibility: hidden;
+}
+
+.css-eyagot {
+  // border-radius: 10%;
+  // border: springgreen solid;
+}
+.save {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+  padding: 8px 16px;
+  border: none;
+  background: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  position: absolute;
+
+  bottom: 25px;
+  right: -20px;
+}
+.special-stay {
+  flex-grow: 1;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  .stay-type{
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 4px 12px;
+    &:hover{
+      background-color: #ebebeb;
+      
+    }
+  }
+  @media (max-width: 1070px) {
+    display: none;
+  }
+}

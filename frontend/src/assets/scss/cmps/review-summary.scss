@@ -1,0 +1,74 @@
+.review-summary {
+  border-top: lightgrey solid 1px;
+  padding-top: 40px;
+  display: flex;
+  gap: 5px;
+  font-weight: 700;
+  span {
+    font-size: 22px;
+  }
+}
+
+.overall {
+  margin-top: 50px;
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  @media (min-width: 850px){
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .rate {
+    display: grid;
+    align-items: center;
+    @media (min-width: 850px){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .rate-number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .container {
+    display: flex;
+    height: 5px;
+    min-width: 60%;
+    max-width: 90%;
+    border-radius: 10px;
+    background-color: rgb(212, 212, 212);
+  }
+}
+
+.skills {
+  color: #000;
+  border-radius: 10px;
+
+  &.cleanliness {
+    width: 90%;
+    background-color: black;
+  }
+  &.communication {
+    width: 85%;
+    background-color: black;
+  }
+  &.check-in {
+    width: 100%;
+    background-color: black;
+  }
+  &.accuracy {
+    width: 100%;
+    background-color: black;
+  }
+  &.value {
+    width: 100%;
+    background-color: black;
+  }
+  &.location {
+    width: 100%;
+    background-color: black;
+  }
+}

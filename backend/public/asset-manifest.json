@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ea428f8.css",
+    "main.js": "/static/js/main.789d8916.js",
+    "static/media/matteo-catanese-dVCGpKZB_E8-unsplash.jpg": "/static/media/matteo-catanese-dVCGpKZB_E8-unsplash.3fe3a7d52edd76ce14a8.jpg",
+    "static/media/alexander-london-3l1sjp562qQ-unsplash.jpg": "/static/media/alexander-london-3l1sjp562qQ-unsplash.a324baeea2f2e4ebd27a.jpg",
+    "static/media/mike-aunzo-Bl-IWjL4s1I-unsplash.jpg": "/static/media/mike-aunzo-Bl-IWjL4s1I-unsplash.4fa24c95c3da29041f6b.jpg",
+    "static/media/prague.jpg": "/static/media/prague.10d2a44f4cfdf63967b3.jpg",
+    "static/media/resized_FI_Getty_Airbnb-host-welcoming-guests.jpg": "/static/media/resized_FI_Getty_Airbnb-host-welcoming-guests.e96198da7e8444f7c097.jpg",
+    "static/media/Paris-at-Night-Wallpapers-Top-Free-Paris-at-Night-.jpg": "/static/media/Paris-at-Night-Wallpapers-Top-Free-Paris-at-Night-.a60853a8b1db06dadbaf.jpg",
+    "static/media/airbnb-rental-host-guests-KINDNESSCARD0720.jpg": "/static/media/airbnb-rental-host-guests-KINDNESSCARD0720.386233e11a650850ada3.jpg",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/CircularStd-Light.otf": "/static/media/CircularStd-Light.4a1a0bfcc3a53847a945.otf",
+    "static/media/brown-regular.ttf": "/static/media/brown-regular.d79c4b00f79087cc9dde.ttf",
+    "static/media/CircularStd-Bold.otf": "/static/media/CircularStd-Bold.5c4514a8399ec0064b9b.otf",
+    "static/media/CircularStd-Medium.otf": "/static/media/CircularStd-Medium.9ffafeddf192e8c8a111.otf",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/1.png": "/static/media/1.5cce5e2a5cb86b3df57a.png",
+    "static/media/1181191_airbnb_icon.svg": "/static/media/1181191_airbnb_icon.61df1068ea56f5d78b37d025ad34861c.svg",
+    "static/media/4.svg": "/static/media/4.9327d04bc7b19eb9764c249a5b466afd.svg",
+    "static/media/2.svg": "/static/media/2.33fb153602f925c2c4b7bc6076b29614.svg",
+    "index.html": "/index.html",
+    "main.4ea428f8.css.map": "/static/css/main.4ea428f8.css.map",
+    "main.789d8916.js.map": "/static/js/main.789d8916.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ea428f8.css",
+    "static/js/main.789d8916.js"
+  ]
+}

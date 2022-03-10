@@ -1,0 +1,64 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 200ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+  .img-container {
+    @include aspect-ratio(1, 1);
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card-info {
+    margin-top: -9px;
+    border-radius: 10px;
+    padding-top: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .address-container {
+      display: inline-block;
+      font-weight: 600;
+
+      h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+      }
+    }
+    .info-container {
+      display: inline-block;
+
+      color: rgb(68, 68, 68);
+      h4 {
+        color: rgb(88, 88, 88);
+        font-weight: 200;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+      }
+      .fas.fa-star::before {
+        font-size: 18px;
+      }
+    }
+    .text-right {
+      text-align: right;
+    }
+  }
+}

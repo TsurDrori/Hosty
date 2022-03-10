@@ -1,0 +1,98 @@
+.login-signup-modal {
+  background-color: white;
+  padding: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  min-width: 350px;
+  z-index: 100;
+  color: rgb(34,34,34);
+  .login-header-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    .close-button {
+      display: inline-grid;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-items: center;
+      &:hover {
+        background-color: rgb(223, 223, 223);
+        cursor: pointer;
+      }
+    }
+    .login-title {
+      display: inline-grid;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  .login-signup-form {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &>*{
+      margin: 12px 0;
+    }
+    .login-welcome-title{
+      font-size: 22px;
+      font-weight: 600;
+      // margin-bottom: 16px;
+      line-height: 26px;
+    }
+    .login-form{
+      border-bottom: 1px solid rgb(145, 145, 145);
+
+    }
+    input{
+      padding: 12px;
+      border-radius:10px;
+      width: 100%;
+      margin: 4px 0;
+      outline: none ;
+    }
+    button.submit-button{
+      padding: 12px;
+      border-radius:10px;
+      width: 100%;
+      background-color: #ff385c;
+      border: 3px solid #ff385c;
+      color: white;
+      margin: 24px 0;
+
+      &:hover{
+        background-color: #ffffff;
+        color: rgb(34,34,34);
+
+        cursor: pointer;
+      }
+    }
+    .toggle-signup-login-button{
+      padding: 12px;
+      // margin: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius:10px;
+      border: 3px solid #ff385c;
+      // color: white;
+      width: 100%;
+      &:hover{
+        background-color: #ff385c;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

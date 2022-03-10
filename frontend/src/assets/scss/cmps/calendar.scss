@@ -1,0 +1,23 @@
+.filter-calendar-div {
+  position: absolute;
+  background-color: WHITE;
+  top: 150px;
+  .save-button{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    font-size: 14px;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px 16px;
+    border: none;
+    background: #ff385c;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}

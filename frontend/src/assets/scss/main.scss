@@ -1,0 +1,40 @@
+//basics
+@import './basics/base';
+@import './basics/helpers';
+
+//setup
+@import './setup/fonts';
+@import './setup/func';
+@import './setup/mixin';
+@import './setup/variables';
+
+//cmps
+@import './cmps/header'; 
+@import './cmps/stay-details.scss';
+@import './basics/font-awesome';
+@import './cmps/stay-preview.scss';
+@import './cmps/top-stay-preview.scss';
+@import './cmps/stay-list.scss';
+@import './cmps/stay-filter.scss';
+@import './cmps/header';
+@import './cmps/inspiration-cards';
+@import './cmps/checkin.scss';
+@import './cmps/guests-filter.scss';
+@import './cmps/additional-filter.scss';
+@import './cmps/review-summary.scss';
+@import './cmps/read-more.scss';
+@import './cmps/host-banner.scss';
+@import './cmps/footer.scss';
+@import './cmps/map.scss';
+@import './cmps/calendar.scss';
+@import './cmps/menu.scss';
+@import './cmps/login-signup-modal.scss';
+@import './cmps/order-preview.scss';
+@import './cmps/user-msg.scss';
+@import './cmps/trip-preview.scss';
+@import './cmps/loader.scss';
+
+//pages
+@import './pages/Home';
+@import './pages/become-host.scss';
+

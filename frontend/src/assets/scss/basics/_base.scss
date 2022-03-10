@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // padding: 0;
+}
+body{
+  color: rgb(34, 34, 34)
+}
+.App {
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  font-family: circular-light;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  // font-family: airbnb;
+  // font-family: airbnb-regular, sans-serif;
+}
+
+.main-root {
+  // flex-grow: 1;
+  display: grid;
+  // grid-template-columns: minmax(2rem,1fr) minmax(auto,1500px) minmax(2rem,1fr);
+  grid-template-columns: 80px 1fr 80px;
+  & > *{
+    grid-column: 2;
+  }
+  .full{
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 740px) {
+  .main-root {
+    grid-template-columns: 10px 1fr 10px;
+  }
+}
