@@ -50,9 +50,7 @@ export function HeaderCenter() {
   const onToggleCal = () => {
     setToggleCal(!toggleCal);
   };
-  const onToggleGuests = (e) => {
-    e.stopPropagation();
-    console.log('executing toggle guests');
+  const onToggleGuests = () => {
     setToggleGuests(!toggleGuests);
   };
 
@@ -68,7 +66,6 @@ export function HeaderCenter() {
   }
   const onSaveGuests = (numOfGuests) => {
     onToggleGuests()
-    console.log('executing guests', numOfGuests);
     setGuests(numOfGuests)
 
   }
