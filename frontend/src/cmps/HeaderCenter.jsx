@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { connect, useSelector, useDispatch } from 'react-redux';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 
-import { GuestsFilter } from './GuestsFilter';
-import { Calendar } from './FilterCalendar.jsx';
+import { GuestsFilter } from './HomeGuestsFilter';
+import { Calendar } from './HomeFilterCalendar.jsx';
 import { utilService } from '../services/util.service';
 
 import { updateText } from '../store/modal.action'
@@ -12,11 +12,13 @@ import { setFilterBy } from '../store/stay.action';
 
 export function HeaderCenter() {
   const [filterByText, setFilterByText] = useState('');
-  const filters = useSelector((state) => state.staysModule.filterBy);
-  
-  const [toggleCal, setToggleCal] = useState(false);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [guests, setGuests] = useState('');
   const [toggleGuests, setToggleGuests] = useState(false);
-  const [firstClick, setToggleFirstClick] = useState(false);
+  const [toggleCal, setToggleCal] = useState(false);
+
+  const filters = useSelector((state) => state.staysModule.filterBy);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -24,16 +26,17 @@ export function HeaderCenter() {
     resetFilters()
   }, [])
 
-  const onSetFilter = (filterBy) => {
+  const onSetFilter = () => {
     history.push('/StaySearch');
-
+    
     const submittedFilter = {
       ...filters,
       name: filterByText,
     };
-
+    
     dispatch(setFilterBy(submittedFilter));
-    //   setFilter(filterBy)
+    setToggleGuests(false);
+    setToggleCal(false);
   };
 
   const resetFilters = () => {
@@ -45,13 +48,30 @@ export function HeaderCenter() {
   }
 
   const onToggleCal = () => {
-    console.log('executing toggle cal');
     setToggleCal(!toggleCal);
   };
-  const onToggleGuests = () => {
+  const onToggleGuests = (e) => {
+    e.stopPropagation();
     console.log('executing toggle guests');
     setToggleGuests(!toggleGuests);
   };
+
+  const ToggleScreen = () => {
+    setToggleGuests(false);
+    setToggleCal(false);
+  }
+
+  const onSaveCal = (startDate, endDate) => {
+    onToggleCal()
+    setStartDate(startDate)
+    setEndDate(endDate)
+  }
+  const onSaveGuests = (numOfGuests) => {
+    onToggleGuests()
+    console.log('executing guests', numOfGuests);
+    setGuests(numOfGuests)
+
+  }
 
   return (
     <div className={`header-center-container`}>
@@ -75,7 +95,6 @@ export function HeaderCenter() {
             <ul className='clean-list'>
               <li>Location</li>
               <li>
-                {' '}
                 <input
                   placeholder='where are you going'
                   type='text'
@@ -87,35 +106,53 @@ export function HeaderCenter() {
           </div>
         </div>
 
-        <div className='date-container'>
+        <div className='date-container' onClick={onToggleCal} >
           <div className='container-border'>
             <ul className='clean-list'>
               <li>Check in</li>
               <li>
-                <input onClick={onToggleCal} placeholder='Add dates'></input>
+                <input
+                  placeholder='Add dates'
+                  type='text'
+                  readOnly={true}
+                  value={startDate} >
+                  
+
+                </input>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className='date-container'>
+        <div className='date-container' onClick={onToggleCal}>
           <div className='container-border'>
             <ul className='clean-list'>
               <li>Check out</li>
               <li>
-                <input onClick={onToggleCal} placeholder='Add dates'></input>
+                <input
+                  placeholder='Add dates'
+                  type='text'
+                  readOnly={true}
+                  value={endDate}>
+                  
+                </input>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className='guests-container' onClick={onToggleGuests}>
+        <div className='guests-container' >
           <div className='container-border'>
-            <ul className='clean-list'>
+            <ul className='clean-list' onClick={onToggleGuests}>
               <li>Guests</li>
               <li>
-                {' '}
-                <input placeholder='add guests' type='text' />
+                <input
+                  placeholder='Add guests'
+                  type='text'
+                  readOnly={true}
+                  value={guests}
+                >
+                </input>
               </li>
             </ul>
 
@@ -125,10 +162,14 @@ export function HeaderCenter() {
           </div>
         </div>
       </div>
-      {toggleCal && <div onClick={onToggleCal}
+
+      {(toggleCal || toggleGuests) && <div onClick={ToggleScreen}
         className='bg'></div>}
-        
-      {toggleCal && <Calendar onToggleCal={onToggleCal}/>}
+
+      {toggleCal && <Calendar onSaveCal={onSaveCal} />}
+
+      {toggleGuests && <GuestsFilter onSaveGuests={onSaveGuests} />}
+
     </div>
   )
 }

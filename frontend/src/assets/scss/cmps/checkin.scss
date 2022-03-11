@@ -308,6 +308,98 @@
       background-color: white;
       color: rgb(34, 34, 34);
     }
+    .guest-type {
+      justify-content: space-between;
+      border-bottom: white solid 1px;
+      padding: 1rem;
+    }
+    
+    .gust-info {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      padding-left: 3%;
+    }
+    .gust-info h3 {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      font-weight: 100;
+    }
+    
+    .gust-info p {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      font-weight: 100;
+      color: rgb(113, 113, 113);
+    }
+    
+    .guest-num {
+      -webkit-box-pack: justify;
+      -webkit-box-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 6.5rem;
+      height: 32px;
+      color: rgb(34, 34, 34);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 3%;
+    }
+    .guest-num button {
+      -webkit-box-align: center;
+      -webkit-box-flex: 0;
+      width: 32px;
+      height: 32px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      cursor: pointer;
+      display: inline-flex;
+      margin: 0px;
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(176, 176, 176);
+      color: rgb(113, 113, 113);
+      font-family: inherit;
+      outline: none;
+      touch-action: manipulation;
+      align-items: center;
+      justify-content: center;
+      background: rgb(255, 255, 255);
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+    
+    .clear {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0px -10px;
+      position: absolute;
+      text-align: center;
+      width: auto;
+      // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      outline: none;
+      padding: 0.6rem;
+      border: none;
+      background-color: rgb(34, 34, 34);
+      color: white;
+      left: 24.8rem;
+      bottom: -2.2rem;
+    }
+    
+    .guest {
+      left: 18rem;
+      bottom: 0.7rem;
+    }
+    
   }
 }
 
