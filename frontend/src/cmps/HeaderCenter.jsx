@@ -5,9 +5,6 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import { GuestsFilter } from './HomeGuestsFilter';
 import { Calendar } from './HomeFilterCalendar.jsx';
-import { utilService } from '../services/util.service';
-
-import { updateText } from '../store/modal.action'
 import { setFilterBy } from '../store/stay.action';
 
 export function HeaderCenter() {
